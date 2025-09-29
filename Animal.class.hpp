@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:49:28 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/29 15:55:04 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/29 22:16:29 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,21 @@
 
 class Animal
 {
-private:
-	/* data */
-protected:
-	std::string	type;
-public:
-	Animal();
-	Animal(Animal const & other);
-	~Animal();
+	private:
+
+	protected:
+		std::string	_type;
+	public:
+		Animal();
+		Animal(Animal const & other);
+		virtual ~Animal();
+
+		Animal const &	operator=(Animal const & other);
+
+		virtual void		makeSound( void ) const;
+		virtual std::string	getType( void ) const;
 
 };
-
-Animal::Animal()
-{
-}
-
-Animal::~Animal()
-{
-}
 
 
 #endif
