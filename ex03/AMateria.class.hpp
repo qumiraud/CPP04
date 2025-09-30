@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:38:29 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 15:30:15 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/30 22:47:08 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <iostream>
 # include <cstdlib>
 # include "ICharacter.class.hpp"
+# include "IMateriaSource.class.hpp"
 
-class AMateria
+class AMateria : public IMateriaSource
 {
 	protected:
 		std::string	_type;
@@ -32,7 +33,11 @@ class AMateria
 		std::string const &	getType( void ) const;
 		virtual AMateria*	clone( void ) const = 0;
 		virtual void		use(ICharacter & target);
+
+
 };
+
+
 
 
 #endif
