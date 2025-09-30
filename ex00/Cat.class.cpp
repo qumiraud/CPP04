@@ -6,12 +6,11 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:50:10 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/29 22:20:09 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/09/30 09:21:36 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.class.hpp"
-
 
 Cat::Cat() : Animal()
 {

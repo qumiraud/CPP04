@@ -6,7 +6,7 @@
 #    By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/29 15:48:39 by qumiraud          #+#    #+#              #
-#    Updated: 2025/09/29 22:19:11 by qumiraud         ###   ########.fr        #
+#    Updated: 2025/09/30 09:28:44 by qumiraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC = main.cpp\
 	Animal.class.cpp\
 	Dog.class.cpp\
 	Cat.class.cpp\
+	WrongAnimal.class.cpp\
+	WrongCat.class.cpp\
 
 
 OBJ = $(SRC:.cpp=.o)
