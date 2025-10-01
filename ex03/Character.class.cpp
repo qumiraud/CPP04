@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:26:29 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 21:49:42 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/01 09:23:37 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,13 @@ Character::Character(std::string const & name) : _nameChar(name)
 Character::Character(Character const & other) : _nameChar(other._nameChar)
 {
 	for(int i = 0; i < 4; i++)
-		this->_inventory[i] = NULL;
+		this->_inventory[i] = other._inventory[i]->clone();
 	std::cout << "Character Copy constructor called" << std::endl;
 }
 
 Character::~Character()
 {
+	delete [] this->_inventory;
+	delete [] this->_uselessItem;
 	std::cout << "Character destructor called" << std::endl;
 }

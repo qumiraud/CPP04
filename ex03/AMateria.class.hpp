@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:38:29 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 22:47:08 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/01 09:56:49 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "ICharacter.class.hpp"
 # include "IMateriaSource.class.hpp"
 
-class AMateria : public IMateriaSource
+class AMateria
 {
 	protected:
 		std::string	_type;
@@ -26,7 +26,7 @@ class AMateria : public IMateriaSource
 		AMateria(); //DEFAULT CONSTR
 		AMateria(std::string const & type); //PARAMETER CONSTR
 		AMateria(AMateria const & other); //COPY CONSTR
-		~AMateria(); //DESTR
+		virtual ~AMateria(); //DESTR
 
 		AMateria const &	operator=(AMateria const & other); //OPER= OVERLOADING
 
