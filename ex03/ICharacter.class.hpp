@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:26:45 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 15:29:32 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:37:04 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <cstdlib>
 # include "AMateria.class.hpp"
+
+class AMateria;
 
 class ICharacter
 {

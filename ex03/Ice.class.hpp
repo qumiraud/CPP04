@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:10:29 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/01 09:53:20 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:32:06 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Ice : public AMateria
 {
 	public:
 		Ice();
+		Ice(std::string const & ice);
 		Ice(Ice const &other);
 		~Ice();
 

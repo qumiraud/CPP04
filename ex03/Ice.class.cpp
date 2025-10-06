@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:10:11 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/01 09:53:17 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:48:24 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,14 @@ Ice const &	Ice::operator=(Ice const & other)
 	return (*this);
 }
 
-Ice::Ice() : AMateria("ice")
+Ice::Ice()
 {
 	std::cout << "Default Ice constructor called" << std::endl;
+}
+
+Ice::Ice(std::string const & ice) : AMateria(ice)
+{
+	std::cout << "Parameter Ice constructor called" << std::endl;
 }
 
 Ice::Ice(Ice const & other) : AMateria(other)

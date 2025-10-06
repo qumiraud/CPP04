@@ -6,7 +6,7 @@
 #    By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 13:37:12 by qumiraud          #+#    #+#              #
-#    Updated: 2025/09/30 13:37:54 by qumiraud         ###   ########.fr        #
+#    Updated: 2025/10/06 10:59:08 by qumiraud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,14 @@ NAME = AMateria
 
 CXX = c++
 
-CXXFLAGS = -Wall -Werror -Wextra -Wshadow -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -Wshadow -g -std=c++98
 
 SRC = main.cpp\
+	AMateria.class.cpp\
+	Character.class.cpp\
+	Cure.class.cpp\
+	Ice.class.cpp\
+	MateriaSource.class.cpp\
 
 
 
