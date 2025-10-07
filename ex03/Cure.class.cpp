@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:10:50 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/06 10:48:10 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:50:40 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ Cure const &	Cure::operator=(Cure const & other)
 
 Cure::Cure()
 {
-	std::cout << "Default Cure constructor called" << std::endl;
+	// std::cout << "Default Cure constructor called" << std::endl;
 }
 
 Cure::Cure(std::string const & cure) : AMateria(cure)
 {
-	std::cout << "Parameter Cure constructor called" << std::endl;
+	// std::cout << "Parameter Cure constructor called" << std::endl;
 }
 
 Cure::Cure(Cure const & other) : AMateria(other)
 {
-	std::cout << "Copy Cure constructor called" << std::endl;
+	// std::cout << "Copy Cure constructor called" << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor called" << std::endl;
+	// std::cout << "Cure destructor called" << std::endl;
 }

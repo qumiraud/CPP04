@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:26:29 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/06 15:37:01 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:54:31 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	Character::use(int idx, ICharacter & target)
 {
-	// if (idx < 0)
-		// return;
 	if ((idx >=0 && idx <= 3) && this->_inventory[idx] )
+	{
+		std::cout << this->getName() << " : ";
 		this->_inventory[idx]->use(target);
+	}
+	else
+		std::cout << "nothing happened cause there is no spell in this inventory slot" << std::endl;
 }
 
 void	Character::equip(AMateria* m)
@@ -39,7 +42,7 @@ void	Character::equip(AMateria* m)
 		fillUselessItem( m );
 		return ;
 	}
-	this->_inventory[i] = m->clone();
+	this->_inventory[i] = m;
 	std::cout << this->getName() << " equip " << m->getType() << " in the inventory slot " << i << std::endl;
 }
 
@@ -61,7 +64,13 @@ Character const &	Character::operator=(Character const & other)
 	{
 		this->_nameChar = other.getName();
 		for(int i = 0; i < 4; i++)
-			this->_inventory[i] = other._inventory[i];
+		{
+			delete this->_inventory[i];
+			if (other._inventory[i])
+				this->_inventory[i] = other._inventory[i]->clone();
+			else
+				this->_inventory[i] = NULL;
+		}
 	}
 	return (*this);
 }
@@ -89,7 +98,7 @@ Character::Character( void )
 	}
 	this->_uselessItem = new AMateria *[1];
 	this->_uselessItem[0] = NULL;
-	std::cout << "Character Default constructor called " << this->_nameChar <<std::endl;
+	// std::cout << "Character Default constructor called " << this->_nameChar <<std::endl;
 }
 
 Character::Character(std::string const & name) : _nameChar(name)
@@ -100,7 +109,7 @@ Character::Character(std::string const & name) : _nameChar(name)
 	}
 	this->_uselessItem = new AMateria *[1];
 	this->_uselessItem[0] = NULL;
-	std::cout << "Character Parameter constructor called " << this->_nameChar <<std::endl;
+	// std::cout << "Character Parameter constructor called " << this->_nameChar <<std::endl;
 }
 
 Character::Character(Character const & other) : _nameChar(other._nameChar)
@@ -109,13 +118,31 @@ Character::Character(Character const & other) : _nameChar(other._nameChar)
 	{
 		if (other._inventory[i])
 			this->_inventory[i] = other._inventory[i]->clone();
+		else
+			this->_inventory[i] = NULL;
 	}
-	std::cout << "Character Copy constructor called " << this->_nameChar << std::endl;
+	int j = 0;
+	while (other._uselessItem[j])
+		j++;
+	_uselessItem = new AMateria*[j + 1];
+	for (int k = 0; k < j; k++)
+		_uselessItem[k] = other._uselessItem[k]->clone();
+	_uselessItem[j] = NULL;
+	// std::cout << "Character Copy constructor called " << this->_nameChar << std::endl;
 }
 
 Character::~Character()
 {
-	delete [] this->_uselessItem;
-
-	std::cout << "Character destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i])
+			delete this->_inventory[i];
+	}
+	if (this->_uselessItem != NULL)
+	{
+		for (int i = 0; this->_uselessItem[i]; i++)
+			delete this->_uselessItem[i];
+		delete[] this->_uselessItem;
+	}
+	// std::cout << "Character " << this->getName() << "destructor called" << std::endl;
 }

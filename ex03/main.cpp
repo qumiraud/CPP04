@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:37:39 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/06 13:55:02 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:53:07 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int main()
 
 
 	std::cout << "|---------[USE EXISTING/UNEXISTING]----------|" << std::endl;
+	me->use(2, *bob);
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->use(-630, *bob);
@@ -97,7 +98,7 @@ int main()
 
 	std::cout << std::endl << std::endl;
 
-
+	// std::cout << "|---------[DESTRUCTOR]----------|" << std::endl;
 
 	delete bob;
 	delete me;

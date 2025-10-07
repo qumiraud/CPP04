@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:38:16 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/10/06 15:16:41 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:50:09 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ std::string const &	AMateria::getType( void ) const
 
 AMateria::AMateria( void )
 {
-	std::cout << "Default AMateria Constructor called" << std::endl;
+	// std::cout << "Default AMateria Constructor called" << std::endl;
 }
 
 AMateria::AMateria(std::string const & type) : _type(type)
 {
-	std::cout << "Parameter AMateria Constructor called" << std::endl;
+	// std::cout << "Parameter AMateria Constructor called" << std::endl;
 }
 
 AMateria::AMateria(AMateria const & other) : _type(other._type)
 {
-	std::cout << "Copy AMateria Constructor called" << std::endl;
+	// std::cout << "Copy AMateria Constructor called" << std::endl;
 }
 
 AMateria const &	AMateria::operator=(AMateria const & other)
@@ -50,5 +50,5 @@ AMateria const &	AMateria::operator=(AMateria const & other)
 
 AMateria::~AMateria()
 {
-	std::cout << "AMateria Destructor called" << std::endl;
+	// std::cout << "AMateria Destructor called" << std::endl;
 }
