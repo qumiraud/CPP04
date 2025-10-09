@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:49:16 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/29 22:09:10 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:53:17 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,10 @@ std::string	Animal::getType( void ) const
 	if (this->_type.empty())
 		return ("no type for this");
 	return (this->_type);
+}
+
+std::string	Animal::getIdeaBrain( int idx ) const
+{
+	(void) idx;
+	return("need to know what kind of animal it's");
 }

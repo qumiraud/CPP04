@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:49:28 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/29 22:16:29 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:54:02 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <cstdlib>
 # include <iostream>
+# include "Brain.class.hpp"
 
 class Animal
 {
@@ -31,6 +32,8 @@ class Animal
 
 		virtual void		makeSound( void ) const;
 		virtual std::string	getType( void ) const;
+		virtual std::string	getIdeaBrain( int idx ) const;
+
 
 };
 

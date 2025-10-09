@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 09:42:42 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 11:14:32 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:46:45 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Brain
 		~Brain();
 
 		Brain const &	operator=(Brain const & other);
+
+		std::string		getIdeas(int idx) const;
 };
 
 

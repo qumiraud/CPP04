@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:49:57 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 12:41:24 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:46:59 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ Dog const &	Dog::operator=(Dog const & other)
 void Dog::makeSound( void ) const
 {
 	std::cout << "Dog make sound for play with you!" << std::endl;
+}
+
+std::string	Dog::getIdeaBrain( int idx ) const
+{
+	return(this->_DogBrain->getIdeas(idx));
 }

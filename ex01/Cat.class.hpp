@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:50:28 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 11:11:22 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:52:03 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Cat : public Animal
 		Cat const &	operator=(Cat const & other);
 
 		void		makeSound( void ) const;
-		// std::string	getType( void ) const;
+		std::string	getIdeaBrain( int idx ) const;
 };
 
 

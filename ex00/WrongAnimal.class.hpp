@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 09:25:40 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 09:26:30 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:37:05 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ class WrongAnimal
 	public:
 		WrongAnimal();
 		WrongAnimal(WrongAnimal const & other);
-		virtual ~WrongAnimal();
+		~WrongAnimal();
 
 		WrongAnimal const &	operator=(WrongAnimal const & other);
 
-		virtual void		makeSound( void ) const;
-		virtual std::string	getType( void ) const;
+		void		makeSound( void ) const;
+		std::string	getType( void ) const;
 
 };
 

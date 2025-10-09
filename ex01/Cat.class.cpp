@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:50:10 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 11:11:47 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:52:38 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ Cat const &	Cat::operator=(Cat const & other)
 void Cat::makeSound( void ) const
 {
 	std::cout << "Cat say MIIIAoumiam cause is hungry!" << std::endl;
+}
+
+std::string	Cat::getIdeaBrain( int idx ) const
+{
+	return(this->_CatBrain->getIdeas(idx));
 }

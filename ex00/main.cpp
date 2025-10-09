@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:48:58 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 09:35:19 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:41:53 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,26 @@
 int main()
 {
 	const Animal* meta = new Animal();//an instance of parent class
-	const Animal* i = new Cat();//an instance of Cat with the Parent Animal type
 	const Animal* j = new Dog();//an instance of Dog with the Parent Animal type
-	const WrongAnimal* k = new WrongCat();//an instance of WrongCat with the Parent WrongAnimal type
+	const Animal* i = new Cat();//an instance of Cat with the Parent Animal type
+	const WrongAnimal* k = new WrongCat();//an instance of WrongCat with the Parent WrongAnimal type without virtual method, so no inheritance
+	const WrongCat* l = new WrongCat();//an instance of WrongCat with the WrongCat type
 	// const Animal* i = new WrongCat(); parent with wrong child
 	// const WrongAnimal* i = new Cat(); wrong parent with child
-	std::cout << i->getType() << " " << std::endl;
 	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
 	std::cout << k->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
+	std::cout << l->getType() << " " << std::endl;
 	j->makeSound();
+	i->makeSound(); //will output the cat sound!
 	k->makeSound();
+	l->makeSound();
 	meta->makeSound();
 
-	delete i;
 	delete j;
+	delete i;
 	delete k;
+	delete l;
 	delete meta;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:49:39 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 10:17:44 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:44:15 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Dog : public Animal
 		Dog const &	operator=(Dog const & other);
 
 		void		makeSound( void ) const;
-		// std::string	getType( void ) const;
+		std::string	getIdeaBrain( int idx ) const;
 };
 
 

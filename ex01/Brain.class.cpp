@@ -6,7 +6,7 @@
 /*   By: qumiraud <qumiraud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 09:42:21 by qumiraud          #+#    #+#             */
-/*   Updated: 2025/09/30 12:35:47 by qumiraud         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:57:59 by qumiraud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,12 @@ Brain const &	Brain::operator=(Brain const & other)
 	if (this != &other)
 		this->_ideas[100] = other._ideas[100];
 	return (*this);
+}
+
+std::string		Brain::getIdeas(int idx) const
+{
+	if (idx >= 0 && idx <= 99)
+		return (this->_ideas[idx]);
+	else
+		return ("this ideas of out mind range");
 }
